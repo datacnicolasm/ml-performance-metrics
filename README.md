@@ -118,3 +118,62 @@ Un modelo puede tener:
 
 - **Alta precisión y bajo recall:** El modelo es bueno para evitar falsos positivos, pero puede estar perdiendo muchos verdaderos positivos.
 - **Alto recall y baja precisión:** El modelo está detectando la mayoría de los positivos, pero también genera muchos falsos positivos.
+
+## 3. Exactitud (Accuracy)
+
+La exactitud o accuracy es una métrica que mide qué tan bien un modelo clasifica correctamente tanto las clases positivas como las negativas. Es la proporción de predicciones correctas sobre el total de predicciones realizadas. En otras palabras, mide el porcentaje de predicciones correctas que hizo el modelo sobre todos los casos.
+
+La exactitud es útil cuando las clases están equilibradas. Sin embargo, en casos de clases desbalanceadas (por ejemplo, una clase positiva muy poco frecuente), puede ser engañosa, ya que un modelo que siempre predice la clase mayoritaria tendrá una alta exactitud, pero no detectará la clase minoritaria.
+
+En Python, utilizando librerías como **scikit-learn**, puedes calcular de forma sencilla:
+
+```python
+# Importar librerías necesarias
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+from sklearn.datasets import load_iris
+
+# Cargar el conjunto de datos Iris
+data = load_iris()
+X = data.data
+y = data.target
+
+# Dividir los datos en entrenamiento y prueba
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Crear y entrenar un modelo de bosque aleatorio
+model = RandomForestClassifier(random_state=42)
+model.fit(X_train, y_train)
+
+# Predecir los valores del conjunto de prueba
+y_pred = model.predict(X_test)
+
+# Calcular la exactitud (accuracy)
+accuracy = accuracy_score(y_test, y_pred)
+
+# Mostrar el resultado
+print(f'Exactitud del modelo: {accuracy:.2f}')
+```
+
+### Explicación:
+
+1. **Cargar el conjunto de datos:** Utilizamos el conjunto de datos Iris para este ejemplo, que es un dataset de clasificación multiclase.
+2. **División de datos:** Separamos los datos en conjuntos de entrenamiento y prueba (70% para entrenamiento y 30% para prueba).
+3. **Entrenamiento del modelo:** Entrenamos un modelo de clasificación con Random Forest.
+4. **Predicción:** Usamos el modelo entrenado para hacer predicciones en los datos de prueba.
+5. **Cálculo del Recall:** Utilizamos la función `accuracy_score(y_test, y_pred)` que calcula la exactitud comparando las etiquetas reales `(y_test)` con las predicciones realizadas `(y_pred)`.
+6. **Resultado:** El resultado es un valor numérico que indica el porcentaje de predicciones correctas sobre el total de predicciones.
+
+### ¿Cómo se interpreta el valor de Accuracy?
+
+La exactitud (o accuracy) indica qué porcentaje de predicciones totales fueron correctas. En el ejemplo anterior, si el resultado fuera `0.93`, significaría que el modelo predijo correctamente el 93% de los ejemplos en el conjunto de prueba.
+
+**Interpretación:**
+
+- **Exactitud alta (cercana a 1):** El modelo está clasificando correctamente la mayoría de los casos. Una exactitud alta es ideal, especialmente en problemas donde las clases están equilibradas.
+- **Exactitud baja (cercana a 0):** El modelo está clasificando mal una gran cantidad de casos. Puede necesitar ajustes en el modelo, más datos de entrenamiento, o tal vez las clases están desbalanceadas.
+
+**Limitaciones:**
+
+- **Datos desbalanceados:** Si una clase es mucho más frecuente que otra, el modelo puede obtener una alta exactitud simplemente prediciendo siempre la clase mayoritaria, sin aprender realmente a detectar la clase menos frecuente. En estos casos, métricas como - precisión, recall o el F1-score pueden ser más útiles que la exactitud sola.
