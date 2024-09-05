@@ -43,10 +43,10 @@ print(f'Precisión del modelo: {precision:.2f}')
 
 ## Explicación:
 
-1. Cargar datos: Aquí utilizamos el conjunto de datos Iris (puedes reemplazarlo por tus propios datos).
-2. División de datos: Separamos los datos en un conjunto de entrenamiento (70%) y uno de prueba (30%).
-3. Entrenamiento: Entrenamos un modelo de clasificación con Random Forest.
-4. Precisión: Utilizamos la función `precision_score` de `scikit-learn` para calcular la precisión del modelo en los datos de prueba.
+1. **Cargar datos:** Aquí utilizamos el conjunto de datos Iris (puedes reemplazarlo por tus propios datos).
+2. **División de datos:** Separamos los datos en un conjunto de entrenamiento (70%) y uno de prueba (30%).
+3. **Entrenamiento:** Entrenamos un modelo de clasificación con Random Forest.
+4. **Precisión:** Utilizamos la función `precision_score` de `scikit-learn` para calcular la precisión del modelo en los datos de prueba.
 
 En el caso de multiclasificación, utilizamos `average='macro'` para calcular la precisión promedio por clase. Si el problema es binario, puedes omitir el argumento `average`.
 
