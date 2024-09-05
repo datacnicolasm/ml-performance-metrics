@@ -8,7 +8,7 @@ Las métricas de evaluación son herramientas esenciales para medir el rendimien
 
 ### Precisión en un Modelo de Clasificación
 
-En ambientes profesionales, la precisión de un modelo de clasificación se calcula como la proporción de verdaderos positivos (TP) sobre el total de predicciones positivas (TP + FP). Es una métrica clave cuando el coste de los falsos positivos es alto.
+La precisión de un modelo de clasificación se calcula como la proporción de verdaderos positivos (TP) sobre el total de predicciones positivas (TP + FP). Es una métrica clave cuando el coste de los falsos positivos es alto.
 
 En Python, utilizando librerías como **scikit-learn**, puedes calcular la precisión de forma sencilla:
 
