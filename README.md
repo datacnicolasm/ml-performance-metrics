@@ -1,12 +1,10 @@
 # Métricas de Evaluación de Modelos de Machine Learning
 
-Este repositorio contiene ejemplos prácticos en Python sobre cómo calcular diversas métricas de evaluación para modelos de **Machine Learning** utilizando la librería **scikit-learn**. A continuación, te mostramos cómo calcular la **precisión**, una métrica fundamental para la evaluación de modelos de clasificación.
+Este repositorio contiene ejemplos prácticos en Python sobre cómo calcular diversas métricas de evaluación para modelos de **Machine Learning**.
 
 ## ¿Qué son las métricas de evaluación de modelos?
 
-Las métricas de evaluación son herramientas esenciales para medir el rendimiento de un modelo de Machine Learning. Nos permiten entender qué tan bien se está desempeñando el modelo, ya sea en tareas de clasificación o regresión. En modelos de clasificación, métricas como **precisión**, **recall**, **F1-Score**, y **AUC-ROC** son fundamentales para determinar qué tan acertadas son las predicciones del modelo en diferentes escenarios.
-
-A continuación, exploramos la **precisión** y cómo calcularla.
+Las métricas de evaluación son herramientas esenciales para medir el rendimiento de un modelo de Machine Learning. Nos permiten entender qué tan bien se está desempeñando el modelo, ya sea en tareas de clasificación o regresión. En modelos de clasificación, estas métricas son fundamentales para determinar qué tan acertadas son las predicciones del modelo en diferentes escenarios.
 
 ---
 
