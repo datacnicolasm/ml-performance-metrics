@@ -106,7 +106,7 @@ print(f'Recall del modelo: {recall:.2f}')
 
 El recall mide cuántos de los verdaderos positivos fueron detectados correctamente por el modelo.
 
-- Un valor de recall = 1.0 indica que el modelo detectó correctamente todos los verdaderos positivos, sin dejar escapar ninguno.
+- Un valor de **recall = 1.0** indica que el modelo detectó correctamente todos los verdaderos positivos, sin dejar escapar ninguno.
 - Un recall bajo indica que el modelo está fallando en capturar una parte significativa de los verdaderos positivos, lo que podría ser problemático en aplicaciones donde es más importante no perder ningún positivo (como en la detección de enfermedades o fraudes).
 
 La precisión y el recall están relacionados pero se enfocan en diferentes aspectos del rendimiento del modelo:
@@ -116,5 +116,5 @@ La precisión y el recall están relacionados pero se enfocan en diferentes aspe
 
 Un modelo puede tener:
 
-- Alta precisión y bajo recall: El modelo es bueno para evitar falsos positivos, pero puede estar perdiendo muchos verdaderos positivos.
-- Alto recall y baja precisión: El modelo está detectando la mayoría de los positivos, pero también genera muchos falsos positivos.
+- **Alta precisión y bajo recall:** El modelo es bueno para evitar falsos positivos, pero puede estar perdiendo muchos verdaderos positivos.
+- **Alto recall y baja precisión:** El modelo está detectando la mayoría de los positivos, pero también genera muchos falsos positivos.
