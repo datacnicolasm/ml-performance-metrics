@@ -6,8 +6,6 @@ Este repositorio contiene ejemplos prácticos en Python sobre cómo calcular div
 
 Las métricas de evaluación son herramientas esenciales para medir el rendimiento de un modelo de Machine Learning. Nos permiten entender qué tan bien se está desempeñando el modelo, ya sea en tareas de clasificación o regresión. En modelos de clasificación, estas métricas son fundamentales para determinar qué tan acertadas son las predicciones del modelo en diferentes escenarios.
 
----
-
 ### Precisión en un Modelo de Clasificación
 
 En ambientes profesionales, la precisión de un modelo de clasificación se calcula como la proporción de verdaderos positivos (TP) sobre el total de predicciones positivas (TP + FP). Es una métrica clave cuando el coste de los falsos positivos es alto.
